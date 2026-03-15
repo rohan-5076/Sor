@@ -14,8 +14,6 @@ background:linear-gradient(135deg,#ff9a9e,#fad0c4);
 overflow:hidden;
 }
 
-/* INTRO */
-
 #intro{
 position:fixed;
 top:0;
@@ -37,8 +35,6 @@ border-right:3px solid white;
 white-space:nowrap;
 overflow:hidden;
 }
-
-/* MAIN */
 
 #main{
 display:none;
@@ -83,8 +79,6 @@ background:#ff4d6d;
 color:white;
 }
 
-/* HEARTS */
-
 .heart{
 position:absolute;
 font-size:22px;
@@ -97,17 +91,14 @@ animation:float 6s linear infinite;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- INTRO -->
-
 <div id="intro">
 <div id="introText"></div>
 </div>
-
-<!-- MAIN PAGE -->
 
 <div id="main">
 
@@ -130,15 +121,11 @@ animation:float 6s linear infinite;
 
 </div>
 
-<!-- MUSIC -->
-
-<audio id="music" loop>
+<audio id="music" controls loop>
 <source src="bairan.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-
-/* INTRO TYPING */
 
 let introText="For Sayali ❤️";
 let introIndex=0;
@@ -163,8 +150,6 @@ document.getElementById("main").style.display="block";
 
 typeIntro();
 
-/* MESSAGE TYPING */
-
 let message="Sayali, मला खरंच खूप वाईट वाटतंय. माझ्याकडून चूक झाली आणि मी तुला खोटं बोललो. I never meant to hurt you. तू माझ्यासाठी खूप important आहेस. Please मला एक chance दे.";
 
 let i=0;
@@ -181,26 +166,18 @@ setTimeout(typeMessage,40);
 
 setTimeout(typeMessage,3000);
 
-/* NO BUTTON RUN */
-
 document.getElementById("no").onmouseover=function(){
 this.style.left=Math.random()*300+"px";
 this.style.top=Math.random()*400+"px";
 }
 
-/* YES CLICK */
-
 function yesClick(){
 alert("Thank you Sayali ❤️ I promise I will never hurt you again.");
 }
 
-/* PLAY MUSIC BUTTON */
-
 function playMusic(){
 document.getElementById("music").play();
 }
-
-/* HEARTS */
 
 function createHeart(){
 
